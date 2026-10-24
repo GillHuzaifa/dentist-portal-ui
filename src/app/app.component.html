@@ -1,0 +1,239 @@
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-2.5 0-4.5 1.4-5.7 3.1C5.4 6.6 5 8.3 5.2 10c.2 1.9.9 3.6 1.4 5.4.4 1.6.7 3.3 1.5 4.8.5.9 1.3 1.6 2.2 1.7.9.1 1.4-.7 1.6-1.5.3-1.1.3-2.3.5-3.4.1-.6.5-1.1 1.1-1.1s1 .5 1.1 1.1c.2 1.1.2 2.3.5 3.4.2.8.7 1.6 1.6 1.5.9-.1 1.7-.8 2.2-1.7.8-1.5 1.1-3.2 1.5-4.8.5-1.8 1.2-3.5 1.4-5.4.2-1.7-.2-3.4-1.1-4.9C16.5 3.4 14.5 2 12 2Z"/></svg>
+      </div>
+      <div>
+        <div class="brand-title">Reception</div>
+        <div class="brand-sub">Dentist Portal</div>
+      </div>
+    </div>
+    <nav class="navlist">
+      <div class="navitem" data-nav="dashboard">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+        Dashboard
+      </div>
+      <div class="navitem" data-nav="queue">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 3v3M15 3v3M4 10h16"/></svg>
+        Queue List
+      </div>
+      <div class="navitem" data-nav="appointments">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 3v3M16 3v3"/></svg>
+        Future Appointments
+      </div>
+      <div class="nav-section-label">Clinical</div>
+      <div class="navitem" data-nav="patients">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Patients
+      </div>
+      <div class="navitem" data-nav="procedures">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2.5l7 7L11 20l-6.5 1.5L6 15z"/><path d="M13 4l7 7"/></svg>
+        Procedures
+      </div>
+      <div class="navitem" data-nav="packages">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8v13H3V8"/><path d="M1 3h22v5H1z"/><path d="M10 12h4"/></svg>
+        Packages
+      </div>
+      <div class="nav-section-label">Admin</div>
+      <div class="navitem" data-nav="doctors">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><path d="M16 8L2 22M17.5 15H9"/></svg>
+        Manage Doctors
+      </div>
+      <div class="navitem" data-nav="history">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h11"/></svg>
+        Patient History
+      </div>
+    </nav>
+  </aside>
+
+  <main class="main">
+
+    <!-- DASHBOARD -->
+    <div class="view" id="view-dashboard">
+      <div class="topbar">
+        <div>
+          <h1 class="page-title">Reception Dashboard</h1>
+          <p class="page-sub">Manage patient flow and dental appointment tokens.</p>
+        </div>
+        <div class="actions">
+          <button class="btn btn-blue" id="btnAddProcedureTop">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+            Add Procedure
+          </button>
+          <button class="btn btn-brand" id="btnWalkinTop">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+            Walk-in Patient
+          </button>
+        </div>
+      </div>
+
+      <div class="stats-row" id="statsRow"></div>
+
+      <div class="grid-2col">
+        <div class="panel">
+          <div class="panel-header">
+            <span class="panel-title">Now Serving</span>
+            <button class="btn btn-ghost btn-sm" onclick="navigate('queue')">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+              Open Queue
+            </button>
+          </div>
+          <div class="serving-list" id="servingList"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <span class="panel-title">Skipped Patients</span>
+            <span class="pill">Today</span>
+          </div>
+          <div id="skippedList"></div>
+        </div>
+      </div>
+
+      <div class="panel-title" style="margin:24px 0 12px;">Patient Slot Distribution</div>
+      <div class="dist-grid" id="distGrid"></div>
+    </div>
+
+    <!-- QUEUE -->
+    <div class="view" id="view-queue">
+      <div class="topbar">
+        <div>
+          <h1 class="page-title">Queue List</h1>
+          <p class="page-sub">Today's consultations and procedures, live.</p>
+        </div>
+        <div class="actions">
+          <button class="btn btn-brand" id="btnWalkinQueue">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+            Walk-in Patient
+          </button>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-header" style="gap:8px; flex-wrap:wrap;">
+          <div style="display:flex; gap:8px; flex-wrap:wrap;" id="queueTabs"></div>
+        </div>
+        <div class="table-wrap" id="queueTableWrap"></div>
+      </div>
+    </div>
+
+    <!-- APPOINTMENTS -->
+    <div class="view" id="view-appointments">
+      <div class="topbar">
+        <div>
+          <h1 class="page-title">Future Appointments</h1>
+          <p class="page-sub">Upcoming scheduled patients by day.</p>
+        </div>
+        <div class="actions">
+          <button class="btn btn-brand" id="btnNewAppointment">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+            New Appointment
+          </button>
+        </div>
+      </div>
+      <div id="appointmentsWrap"></div>
+    </div>
+
+    <!-- PATIENTS LIST -->
+    <div class="view" id="view-patients">
+      <div class="topbar">
+        <div>
+          <h1 class="page-title">Patients</h1>
+          <p class="page-sub">Records, dental charts, X-rays, procedures &amp; packages.</p>
+        </div>
+        <div class="actions">
+          <div class="searchbar">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+            <input id="patientSearch" placeholder="Search name or phone…">
+          </div>
+          <button class="btn btn-brand" id="btnNewPatient">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+            New Patient
+          </button>
+        </div>
+      </div>
+      <div class="panel"><div class="table-wrap" id="patientsTableWrap"></div></div>
+    </div>
+
+    <!-- PATIENT DETAIL -->
+    <div class="view" id="view-patient-detail">
+      <div class="back-btn" onclick="navigate('patients')">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Back to Patients
+      </div>
+      <div class="panel">
+        <div style="padding:18px 18px 0;">
+          <div class="patient-head" id="patientHeadWrap"></div>
+        </div>
+        <div class="tabs" id="patientTabs"></div>
+        <div id="patientTabPanels"></div>
+      </div>
+    </div>
+
+    <!-- PROCEDURES -->
+    <div class="view" id="view-procedures">
+      <div class="topbar">
+        <div>
+          <h1 class="page-title">Procedures</h1>
+          <p class="page-sub">Catalog of treatments offered, with duration &amp; pricing.</p>
+        </div>
+        <div class="actions">
+          <button class="btn btn-brand" id="btnNewProcedureCatalog">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+            Add Procedure
+          </button>
+        </div>
+      </div>
+      <div class="panel"><div class="table-wrap" id="proceduresTableWrap"></div></div>
+    </div>
+
+    <!-- PACKAGES -->
+    <div class="view" id="view-packages">
+      <div class="topbar">
+        <div>
+          <h1 class="page-title">Treatment Packages</h1>
+          <p class="page-sub">Bundled, multi-session treatments for patients.</p>
+        </div>
+        <div class="actions">
+          <button class="btn btn-brand" id="btnNewPackage">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+            Add Package
+          </button>
+        </div>
+      </div>
+      <div class="panel"><div class="table-wrap" id="packagesTableWrap"></div></div>
+    </div>
+
+    <!-- DOCTORS -->
+    <div class="view" id="view-doctors">
+      <div class="topbar">
+        <div>
+          <h1 class="page-title">Manage Doctors</h1>
+          <p class="page-sub">Departments, on-duty status &amp; roster.</p>
+        </div>
+        <div class="actions">
+          <button class="btn btn-brand" id="btnNewDoctor">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+            Add Doctor
+          </button>
+        </div>
+      </div>
+      <div class="panel"><div class="table-wrap" id="doctorsTableWrap"></div></div>
+    </div>
+
+    <!-- HISTORY -->
+    <div class="view" id="view-history">
+      <div class="topbar">
+        <div>
+          <h1 class="page-title">Patient History</h1>
+          <p class="page-sub">Completed visits and past treatment records.</p>
+        </div>
+      </div>
+      <div class="panel"><div class="table-wrap" id="historyTableWrap"></div></div>
+    </div>
+
+  </main>
+</div>
+
+<div class="overlay" id="overlay"><div id="modalBody"></div></div>
+<div class="toast" id="toast"></div>
